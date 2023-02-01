@@ -1,0 +1,23 @@
+.login {
+    width: 100vw;
+}
+
+.left-login {
+    width: 50vw;
+    flex-direction: column;
+}
+
+.titulo {
+    color: yellow;
+}
+
+.right-login {
+    width: 50vh;
+
+}
+.login, .left-login, .right-login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
