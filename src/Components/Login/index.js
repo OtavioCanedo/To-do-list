@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css'
-import Form from './form';
+import Form from '../Form';
+import tasks from '../../assets/tasks.webp';
 
 const Login = () => {
 
   return (
     <div className='login'>
       <div className='left-login'>
-        <h1 className='titulo'>Faça o login e orgazine suas tarefas</h1>
-        <h1>titulo</h1>
+        <h1>Faça o login e<br /> orgazine suas tarefas</h1>
+        <img src={tasks} alt="imagem de tarefas" className='left-login-image' />
       </div>
       <div className='right-login'>
-        <Form />
+        <div className='card-login'>
+          <h1>LOGIN</h1>
+          <Form />
+        </div>
       </div>
     </div>
   );
