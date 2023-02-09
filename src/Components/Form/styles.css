@@ -49,3 +49,7 @@
     color: #0300a7;
     border: 1px solid #0300a7;
 }
+
+.error{
+    color: red;
+}
