@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import './styles.css'
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (username === 'admin' && password === 'password') {
       setError(null);
-      // redirect to dashboard or show success message
+      navigate("/task")
     } else {
-      setError('Invalid username or password');
+      setError('Usuário ou senha inválidos');
     }
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      {error && <p>{error}</p>}
       <label>
         <div className='textfield'>
           <input
@@ -27,7 +28,7 @@ const Form = () => {
             type="text"
             value={username}
             onChange={event => setUsername(event.target.value)}
-          />
+            />
         </div>
       </label>
       <br />
@@ -38,11 +39,12 @@ const Form = () => {
             placeholder="Senha"
             value={password}
             onChange={event => setPassword(event.target.value)}
-          />
+            />
+            {error && <p className='error'>{error}</p>}
         </div>
       </label>
       <br />
-      <button type="submit" className='button'>ENTRAR</button>
+      <button type="submit" className='button' onClick={handleSubmit}>ENTRAR</button>
     </form>
   );
 }
