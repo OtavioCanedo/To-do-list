@@ -1,0 +1,124 @@
+.todo-app {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.todo-form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.todo-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0300a7;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+}
+
+.todo-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: #ddd;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  width: 33%;
+  background-image: linear-gradient(to top, #000229, #0300a7);
+  color: white;
+  border-radius: 10px;
+}
+
+.col-1 {
+  justify-content: start;
+  margin: 20px 10px 0px 20px;
+}
+
+.todo-list button {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  border: 1px solid #91C9FF;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
+.button1 {
+  margin-left: auto;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.button1:hover {
+  transform: scale(1.1);
+}
+
+.button1:hover::after {
+  content: "Começar";
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+}
+
+.button2 {
+  transition: all 0.3s ease;
+}
+
+.button2:hover {
+  transform: scale(1.1);
+}
+
+.button2:hover::after {
+  content: "Excluir";
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+}
+
+.col-2 {
+  justify-content: center;
+  margin: 20px 10px 0px 10px;
+}
+
+.col-3 {
+  justify-content: end;
+  margin: 20px 20px 0px 10px;
+}
