@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Todolist from '../Components/to-do-list';
+import Todoapp from '../Pages/Todoapp';
 
-import Login from '../Components/Login';
+import Login from '../Pages/Login';
 
 const Router = () => (
   <Routes>
     <Route path="/" exact element={<Login />} />
-    <Route path="/task" element={<Todolist />} />
+    <Route path="/task" element={<Todoapp />} />
   </Routes>
 )
 
