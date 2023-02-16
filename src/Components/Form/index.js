@@ -11,7 +11,7 @@ const Form = () => {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (username === 'admin' && password === 'password') {
+    if (username === 'admin' && password === '1234') {
       setError(null);
       navigate("/task")
     } else {
