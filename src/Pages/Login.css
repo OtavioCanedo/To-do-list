@@ -1,0 +1,82 @@
+body * {
+  box-sizing: border-box;
+}
+
+.login {
+  width: 100vw;
+}
+
+.left-login {
+  width: 50vw;
+  flex-direction: column;
+}
+
+.right-login {
+  width: 50vh;
+}
+
+.left-login > h1 {
+  font-size: 3vw;
+  color: #0300a7;
+}
+
+.left-login-image {
+  width: 35vw;
+}
+
+.login, .left-login, .right-login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background-image: linear-gradient(to top, #000229, #0300a7);
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px #000000;
+}
+
+.card-login > h1 {
+  color: #91C9FF;
+  font-weight: 800;
+  margin: 0;
+}
+
+.card-login > Form {
+  width: 100%;
+}
+
+@media only screen and (max-width: 950px) {
+  .card-login {
+      width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+      flex-direction: column;
+  }
+  .left-login > h1 {
+      display: none;
+  }
+
+  .left-login, .right-login {
+      width: 100%;
+      height: auto;
+  }
+
+  .left-login-image {
+      width: 50vw;
+  }
+
+  .card-login {
+      width: 90%;
+  }
+}
